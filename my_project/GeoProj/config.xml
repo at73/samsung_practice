@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/GeoProj2" version="1.0.1" viewmodes="maximized">
+    <access origin="*" subdomains="true"></access>
+    <tizen:application id="3tFZfNF1Lw.GeoProj2" package="3tFZfNF1Lw" required_version="2.3.1"/>
+    <author>Alexander</author>
+    <content src="index.html"/>
+    <description>Geolocation project</description>
+    <feature name="http://tizen.org/feature/screen.size.all"/>
+    <icon src="geoicon.png"/>
+    <name>GeoProj2</name>
+    <tizen:privilege name="http://tizen.org/privilege/healthinfo"/>
+    <tizen:privilege name="http://tizen.org/privilege/internet"/>
+    <tizen:privilege name="http://tizen.org/privilege/location"/>
+    <tizen:profile name="wearable"/>
+    <tizen:setting background-support="disable" encryption="disable" hwkey-event="enable"/>
+</widget>

@@ -1,0 +1,16 @@
+html, body {
+        margin: 0;
+        padding: 2px;
+      }
+
+.map {
+	height: 240px;
+	width: 320px;
+	padding: 2px;
+}
+
+.center-text {
+	text-align: center;
+}
+
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>GeoProj</title>
+	<link rel="stylesheet" href="css/themes/geo.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" /> 
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+	<div data-role="page" id="main" data-theme="a">
+		<div data-role="header">
+			<h1>Home</h1>
+		</div>
+		<div data-role="content">
+			<div class="center-text">
+				<h2>GeoProj</h2>
+			</div>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#myloc" class="ui-btn">Мое местоположение на карте</a></li>
+				<li><a href="#dist" class="ui-btn">Информация о моей активности</a></li>
+				<li><a href="#rout" class="ui-btn">Создание маршрута</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" class="center-text">
+			<a href="#contact" id="mail" class="ui-btn">Контакты</a>
+			<a href="#about_app" id="about" class="ui-btn">О приложении GeoProj</a>
+		</div>
+	</div>
+	
+	<div data-role="page" id="myloc" data-theme="a">
+		<div data-role="header">
+			<h1>Моя геопозиция</h1>
+		</div>
+		<div data-role="content">
+			<div class="map" id="map-canvas">
+				<button data-mini="true" onclick="myLocation()">Показать мое местонахождение</button>
+			</div>
+		</div>
+
+		<div data-role="footer">
+				<ul data-role="listview">
+					<li><a href="#main"><div class="center-text">Назад</div></a></li>
+				</ul>
+		</div>
+	</div>
+	
+	<div data-role="page" id="dist">
+		<div data-role="header">
+			<h1>Моя активность</h1>
+		</div>
+		<div data-role="content" data-theme="a">
+			<!-- 
+			<div id="out">
+				<button onclick="geoFindMe()">Show my coordinate</button>
+			</div>
+			 -->
+			<div>
+				<button data-mini="true" onclick="start()">Начать отсчет</button>
+				<div id="beginCount"></div>
+				<div id="infoCount"></div>
+				<button data-mini="true" onclick="finish()">Завершить</button>
+			</div>
+		</div>
+
+		<div data-role="footer" data-theme="a">
+				<ul data-role="listview">
+					<li><a href="#main"><div class="center-text">Назад</div></a></li>
+				</ul>
+		</div>
+	</div>
+	
+	<div data-role="page" id="rout">
+		<div data-role="header">
+			<h1>Мой маршрут</h1>
+		</div>
+		<div data-role="content" data-theme="a">
+			<button data-mini="true" onclick="createMap()">Показать карту</button>
+			<div class="ui-body center-text">
+				<p>Кликните на место в карте,<br>куда вы хотите добраться пешком:</p>
+			</div>
+			<div class="map" id="direct-map"></div>
+			<button data-mini="true" onclick="createRoute()">Построить маршрут</button>
+		</div>
+		<div data-role="footer" data-theme="a">
+			<ul data-role="listview">
+				<li><a href="#main"><div class="center-text">Назад</div></a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div data-role="page" id="contact">
+		<div data-role="header">
+			<h1>Контакты</h1>
+		</div>
+		<div data-role="content" data-theme="a">
+			<div class="ui-body ui-body-a ui-corner-all center-text">
+				<p>
+					Обращаться с вопросами и предложениями<br><b>к Александру</b>
+					<br>Контактные данные:<br>
+					89876543210
+				</p>
+			</div>
+		</div>
+		<div data-role="footer" data-theme="a">
+				<ul data-role="listview">
+					<li><a href="#main"><div class="center-text">Назад</div></a></li>
+				</ul>
+		</div>
+	</div>
+	
+	<div data-role="page" id="about_app">
+		<div data-role="header">
+			<h1>О приложении</h1>
+		</div>
+		<div data-role="content" data-theme="a">
+			<div class="ui-body ui-body-a ui-corner-all center-text">
+				<p>
+				"Классное" геолокационное приложение со следующими функциями: 
+				<br>нахождение собственной геопозиции; 
+				<br>получение информации о передвижении; 
+				<br>построение маршрута до указанной точки на карте.
+				</p>
+			</div>
+		</div>
+		<div data-role="footer" data-theme="a">
+				<ul data-role="listview">
+					<li><a href="#main"><div class="center-text">Назад</div></a></li>
+				</ul>
+		</div>
+	</div>
+	
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script	src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&mode=release" type="text/javascript"></script>
+	<script src="js/ya.js"></script>
+	<script src="js/dist.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/lowBatteryCheck.js"></script>
+</body>
+
+</html>
